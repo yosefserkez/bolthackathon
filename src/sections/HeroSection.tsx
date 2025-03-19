@@ -210,7 +210,7 @@ const HeroSection: React.FC = () => {
   const heroY = useTransform(scrollYProgress, [0, 0.5], [0, -50]);
   
   return (
-    <section ref={sectionRef} id="hero" className="relative min-h-screen overflow-hidden pt-20">
+    <section ref={sectionRef} id="hero" className="relative min-h-screen overflow-hidden">
       {/* Black background */}
       <div className="fixed inset-0 bg-black z-0" />
       
@@ -315,7 +315,7 @@ const HeroSection: React.FC = () => {
               href="#register"
               icon={<ArrowRight className="w-5 h-5" />}
               iconPosition="right"
-              className="bg-neon-cyan hover:bg-neon-cyan/90 text-black shadow-lg shadow-neon-cyan/20 hover:shadow-xl hover:shadow-neon-cyan/30 transition-all"
+              className="bg-neon-cyan/80 hover:bg-neon-cyan/60 text-black shadow-lg shadow-neon-cyan/20 hover:shadow-xl hover:shadow-neon-cyan/30 transition-all"
             >
               Register Now
             </Button>

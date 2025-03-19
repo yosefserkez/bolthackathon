@@ -74,7 +74,7 @@ const NavBar: React.FC = () => {
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
         isScrolled 
-          ? ' backdrop-blur-xs shadow-lg' 
+          ? ' backdrop-blur-sm shadow-lg' 
           : 'bg-transparent'
       }`}
     >

@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
       starImg.className = 'absolute z-0';
       
       // Random position, size and opacity
-      const size = Math.random() * 42 + 4; // Smaller stars
+      const size = Math.random() * 22 + 4; // Smaller stars
       const posX = Math.random() * 100;
       const posY = Math.random() * 400; // Extended vertical range for scrolling effect
       const opacity = Math.random() * 0.6 + 0.1; // More subtle
@@ -67,41 +67,41 @@ const HeroSection: React.FC = () => {
       });
 
       // Create 2-3 smaller companion stars
-      for (let j = 0; j < Math.floor(Math.random() * 2) + 1; j++) {
-        const smallStarImg = document.createElement('img');
-        smallStarImg.src = starIconSvg;
-        smallStarImg.className = 'absolute z-0';
+      // for (let j = 0; j < Math.floor(Math.random() * 2) + 1; j++) {
+      //   const smallStarImg = document.createElement('img');
+      //   smallStarImg.src = starIconSvg;
+      //   smallStarImg.className = 'absolute z-0';
         
-        const smallSize = size * 0.4;
-        const offsetX = Math.random() * 30 - 15;
-        const offsetY = Math.random() * 30 - 15;
+      //   const smallSize = size * 0.4;
+      //   const offsetX = Math.random() * 30 - 15;
+      //   const offsetY = Math.random() * 30 - 15;
         
-        smallStarImg.style.width = `${smallSize}px`;
-        smallStarImg.style.height = `${smallSize}px`;
-        smallStarImg.style.left = `${parseFloat(starImg.style.left) + offsetX}%`;
-        smallStarImg.style.top = `${parseFloat(starImg.style.top) + offsetY}%`;
-        smallStarImg.style.opacity = `${opacity * 0.7}`;
-        smallStarImg.style.filter = 'brightness(1.5) saturate(0) invert(1)';
+      //   smallStarImg.style.width = `${smallSize}px`;
+      //   smallStarImg.style.height = `${smallSize}px`;
+      //   smallStarImg.style.left = `${parseFloat(starImg.style.left) + offsetX}%`;
+      //   smallStarImg.style.top = `${parseFloat(starImg.style.top) + offsetY}%`;
+      //   smallStarImg.style.opacity = `${opacity * 0.7}`;
+      //   smallStarImg.style.filter = 'brightness(1.5) saturate(0) invert(1)';
         
-        starsContainer.appendChild(smallStarImg);
+      //   starsContainer.appendChild(smallStarImg);
 
-        gsap.to(smallStarImg, {
-          motionPath: {
-            path: [{x: 0, y: 0},
-                   {x: 15, y: -15},
-                   {x: 30, y: 0},
-                   {x: 15, y: 15},
-                   {x: 0, y: 0}],
-            curviness: 1.5
-          },
-          rotation: 360,
-          opacity: gsap.utils.random(0.05, 0.3),
-          duration: gsap.utils.random(15, 30),
-          repeat: -1,
-          ease: "none",
-          delay: Math.random() * 3,
-        });
-      }
+      //   gsap.to(smallStarImg, {
+      //     motionPath: {
+      //       path: [{x: 0, y: 0},
+      //              {x: 15, y: -15},
+      //              {x: 30, y: 0},
+      //              {x: 15, y: 15},
+      //              {x: 0, y: 0}],
+      //       curviness: 1.5
+      //     },
+      //     rotation: 360,
+      //     opacity: gsap.utils.random(0.05, 0.3),
+      //     duration: gsap.utils.random(15, 30),
+      //     repeat: -1,
+      //     ease: "none",
+      //     delay: Math.random() * 3,
+      //   });
+      // }
     }
     
     return () => {
@@ -311,11 +311,11 @@ const HeroSection: React.FC = () => {
           >
             <Button 
               size="lg" 
-              variant="primary" 
+              variant="outline" 
               href="#register"
               icon={<ArrowRight className="w-5 h-5" />}
               iconPosition="right"
-              className="bg-neon-cyan/80 hover:bg-neon-cyan/60 text-black shadow-lg shadow-neon-cyan/20 hover:shadow-xl hover:shadow-neon-cyan/30 transition-all"
+              className="bg-neon-cyan/80 hover:bg-white/5 transition-all text-black shadow-lg shadow-neon-cyan/20 hover:shadow-xl hover:shadow-neon-cyan/30 transition-all"
             >
               Register Now
             </Button>
